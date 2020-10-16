@@ -13,6 +13,67 @@ const render = require("./lib/htmlRenderer");
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+const questions = [
+    {
+        type: "list",
+        name: "employeeType",
+        message: "Select the job title of the team member you wish to add to the directory",
+        choices: ["Manager", "Engineer", "Intern", "I do not wish to add any more team members"]
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "Please enter the team member's full name",
+        when: function(answers) {
+            return answers.employeeType !== "I do not wish to add any more team members";
+        }
+    },
+    {
+        type: "input",
+        name: "id",
+        message: "Please enter the team member's ID",
+        when: function(answers) {
+            return answers.employeeType !== "I do not wish to add any more team members";
+        }
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Please enter the team member's e-mail address",
+        when: function(answers) {
+            return answers.employeeType !== "I do not wish to add any more team members";
+        }
+    },
+    {
+        type: "input",
+        name: "officeNumber",
+        message: "What is the manager's office number?",
+        when: function(answers) {
+            return answers.employeeType === "Manager";
+        }
+    },
+    {
+        type: "input",
+        name: "gitHub",
+        message: "What is the engineer's GitHub username?",
+        when: function(answers) {
+            return answers.employeeType === "Engineer";
+        }
+    },
+    {
+        type: "input",
+        name: "school",
+        message: "Where does the intern go to school?",
+        when: function(answers) {
+            return answers.employeeType === "Intern";
+        }
+    }
+]
+
+inquirer.prompt(questions).then((answers) => {
+    console.log(JSON.stringify(answers, null, ""));
+    console.log(JSON.stringify(answers.employeeType, null, ""));
+})
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
