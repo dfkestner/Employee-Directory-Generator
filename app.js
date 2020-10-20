@@ -71,8 +71,6 @@ function addEmployees() {
             }
         }
     ]).then(answers => {
-        console.log(JSON.stringify(answers, null, ""));
-        console.log(answers, null, "");
         console.log(JSON.stringify(answers.employeeType, null, ""));
     
         if (answers.employeeType === "Manager") {
