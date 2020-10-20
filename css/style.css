@@ -1,0 +1,54 @@
+.jumbotron {
+    background: linear-gradient( #173f5f, #4987b9);
+    font-family: "Arial Black", Gadget, sans-serif; 
+    color: rgb(255, 255, 255);
+}
+
+body {
+    background: #4987b9;
+}
+
+h2, h3, li {
+    font-family: fantasy;
+    text-align: center;
+}
+
+h2 {
+    font-weight: bolder;
+}
+
+.manager {
+    background: #64b7fa;
+}
+
+.mbody {
+    background: #93cbf8;
+}
+
+.mlist {
+    background: #c4dbee;
+}
+
+.engineer {
+    background: #57f8e8;
+}
+
+.ebody {
+    background: #8efaef;
+}
+
+.elist {
+    background: #c6faf5;
+}
+
+.intern {
+    background: #f6d55c;
+}
+
+.ibody {
+    background: #f5e096;
+}
+
+.ilist {
+    background: #f3e9c5;
+}
