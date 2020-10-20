@@ -5,6 +5,9 @@
   ## Description
 
   A command line tool that allows users to generate an HTML Employee Directory through a series of inquirer prompts. The 'when' function is used to display different prompts based on the type of employee selected.
+  
+  [Video Demonstration](https://drive.google.com/file/d/1rCW2JytQ5DWyTSLVhToSiIyGQ5ZgMrur/view)
+  ![EDG Screenshot](https://github.com/dfkestner/Employee-Directory-Generator/blob/main/EDG-Screenshot.png)
 
   ## Table of Contents
 
